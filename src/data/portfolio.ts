@@ -69,6 +69,15 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Iara — assistente de estoque e lucro no WhatsApp",
+    client: "Natura &Co",
+    year: "2023 — atual",
+    tags: ["Product Design", "Design Conversacional", "MVP"],
+    description:
+      "De experimento Concierge a MVP: ajudamos Consultoras a enxergar estoque, validade e lucro sem sair do WhatsApp.",
+    href: "/cases/iara",
+  },
+  {
     title: "Experiência digital para consultoras Natura & Avon",
     client: "Natura &Co",
     year: "2023 — atual",
