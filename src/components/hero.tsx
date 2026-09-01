@@ -58,18 +58,18 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:justify-center md:px-8 md:pb-24 md:pt-28">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-14 pt-24 md:justify-center md:px-8 md:pb-20 md:pt-24">
         <div className="max-w-3xl">
-          <p className="animate-rise mb-5 text-sm font-semibold tracking-[0.18em] uppercase text-moss">
+          <p className="animate-rise mb-4 text-sm font-semibold tracking-[0.18em] uppercase text-moss">
             {profile.role} · {profile.company}
           </p>
-          <h1 className="animate-rise-delay-1 font-display text-[clamp(3.2rem,12vw,6.75rem)] leading-[0.92] tracking-[-0.03em] text-ink text-balance">
+          <h1 className="animate-rise-delay-1 font-display text-[clamp(2.75rem,9vw,5.25rem)] leading-[0.94] tracking-[-0.03em] text-ink text-balance">
             {profile.name}
           </h1>
-          <p className="animate-rise-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-moss-deep/85 md:text-xl">
+          <p className="animate-rise-delay-2 mt-5 max-w-xl text-base leading-relaxed text-moss-deep/85 md:mt-6 md:text-xl">
             {profile.headline}
           </p>
-          <div className="animate-rise-delay-3 mt-9 flex flex-wrap items-center gap-3">
+          <div className="animate-rise-delay-3 mt-7 flex flex-wrap items-center gap-3 md:mt-8">
             <Button asChild size="lg" className="h-11 rounded-full px-6 text-base">
               <a href="#projetos">Ver projetos</a>
             </Button>
@@ -84,12 +84,6 @@ export function Hero() {
               </a>
             </Button>
           </div>
-        </div>
-
-        <div className="mt-16 hidden items-end justify-between gap-8 border-t border-moss/15 pt-6 text-sm text-moss-deep/70 md:flex">
-          <p>{profile.location}</p>
-          <p>Product Design · Liderança · UX Research</p>
-          <p>{profile.years} anos em projetos digitais</p>
         </div>
       </div>
     </section>

@@ -17,8 +17,8 @@ export function About() {
           <p className="mt-4 max-w-xl text-base leading-relaxed text-moss-deep/75">
             Já atuei em bancos, fintechs, varejo, mídia e beleza — sempre com
             olhar de arquitetura de informação, pesquisa e entrega prática. Hoje,
-            como Design Lead na Natura &Co, ajudo times a construir serviços
-            digitais para consultoras Natura e Avon.
+            como Design Lead na Natura &Co em São Paulo, ajudo times a construir
+            serviços digitais para consultoras Natura e Avon.
           </p>
         </div>
 
