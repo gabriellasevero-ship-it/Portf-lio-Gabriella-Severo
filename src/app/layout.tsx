@@ -1,17 +1,17 @@
-import { Cormorant_Garamond, Figtree } from "next/font/google";
+import { Outfit, Syne } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const figtree = Figtree({
+const outfit = Outfit({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const cormorant = Cormorant_Garamond({
+const syne = Syne({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${figtree.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${outfit.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

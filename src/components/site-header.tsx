@@ -28,29 +28,29 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-border/70 bg-mist/85 backdrop-blur-md"
+          ? "border-b border-border/80 bg-mist/90 backdrop-blur-md"
           : "bg-transparent"
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
         <a
           href="#topo"
-          className="font-display text-xl tracking-tight text-ink md:text-2xl"
+          className="font-display text-lg tracking-tight text-ink md:text-xl"
         >
-          Gabriella<span className="text-moss">.</span>
+          Gabriella<span className="text-signal">.</span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-moss-deep/75 transition-colors hover:text-ink"
+              className="text-sm font-medium text-ink/65 transition-colors hover:text-ink"
             >
               {link.label}
             </a>
           ))}
-          <Button asChild size="lg" className="rounded-full px-5">
+          <Button asChild size="lg" className="rounded-md px-4">
             <a href={profile.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
@@ -59,7 +59,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/70 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card/80 md:hidden"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
@@ -89,7 +89,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="border-t border-border/70 bg-mist/95 px-5 py-4 backdrop-blur-md md:hidden">
+        <div className="border-t border-border/80 bg-mist/95 px-5 py-4 backdrop-blur-md md:hidden">
           <nav className="flex flex-col gap-3">
             {links.map((link) => (
               <a
@@ -101,7 +101,7 @@ export function SiteHeader() {
                 {link.label}
               </a>
             ))}
-            <Button asChild className="mt-2 rounded-full">
+            <Button asChild className="mt-2 rounded-md">
               <a href={profile.linkedin} target="_blank" rel="noreferrer">
                 Ver LinkedIn
               </a>
