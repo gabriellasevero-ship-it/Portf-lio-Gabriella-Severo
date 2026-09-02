@@ -132,6 +132,22 @@ export const projects = [
     description:
       "Intranet inspirada em comportamentos de redes sociais — navegação fluida, compartilhamento de ideias e ferramentas de comunicação interna.",
   },
+  {
+    title: "Redesenho do portal ESPN",
+    client: "Urban Summer",
+    year: "Jul 2012",
+    tags: ["Portal", "Arquitetura de Informação", "Usabilidade"],
+    description:
+      "Redesenho do portal de esportes melhorando a arquitetura da informação e usabilidade.",
+  },
+  {
+    title: "Redesenho Investshop",
+    client: "Urban Summer",
+    year: "Nov 2011",
+    tags: ["Investimentos", "UI", "Usabilidade"],
+    description:
+      "Redesenho total da interface do site focado no usuário. O desafio foi mostrar um assunto complicado — investimentos e ações — tanto para o público maduro no assunto quanto para o mais leigo.",
+  },
 ];
 
 export const education = [
