@@ -51,8 +51,8 @@ export function SiteHeader() {
             </a>
           ))}
           <Button asChild size="lg" className="rounded-md px-4">
-            <a href={profile.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
+            <a href={profile.whatsapp.href} target="_blank" rel="noreferrer">
+              WhatsApp
             </a>
           </Button>
         </nav>
@@ -102,8 +102,8 @@ export function SiteHeader() {
               </a>
             ))}
             <Button asChild className="mt-2 rounded-md">
-              <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                Ver LinkedIn
+              <a href={profile.whatsapp.href} target="_blank" rel="noreferrer">
+                WhatsApp
               </a>
             </Button>
           </nav>

@@ -25,26 +25,42 @@ export function Contact() {
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-mist/75 md:text-lg">
                 Aberta a trocas sobre design de produto, gestão de times e
-                experiências digitais em escala. O melhor canal hoje é o LinkedIn.
+                experiências digitais em escala. O canal mais rápido é o WhatsApp.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                 <Button
                   asChild
                   size="lg"
-                  className="h-11 rounded-md bg-signal px-6 text-base text-ink hover:bg-signal/90"
+                  className="h-12 rounded-md bg-signal px-7 text-base font-semibold text-ink hover:bg-signal/90"
                 >
-                  <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                    Abrir LinkedIn
+                  <a
+                    href={profile.whatsapp.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WhatsApp {profile.whatsapp.display}
                   </a>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="h-11 rounded-md border-mist/25 bg-transparent px-6 text-base text-mist hover:bg-mist/10 hover:text-mist"
-                >
-                  <a href="#projetos">Rever projetos</a>
-                </Button>
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="h-11 rounded-md border-mist/25 bg-transparent px-5 text-base text-mist hover:bg-mist/10 hover:text-mist"
+                  >
+                    <a href={`mailto:${profile.email}`}>{profile.email}</a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="h-11 rounded-md border-mist/25 bg-transparent px-5 text-base text-mist hover:bg-mist/10 hover:text-mist"
+                  >
+                    <a href={profile.linkedin} target="_blank" rel="noreferrer">
+                      LinkedIn
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
 

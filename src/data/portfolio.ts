@@ -9,6 +9,11 @@ export const profile = {
   summary:
     "Product Designer e Design Lead com mais de 15 anos em projetos digitais. Comecei como arquiteta de informação e hoje conduzo times end-to-end — discovery, pesquisa, arquitetura, UI e handoff — sempre equilibrando necessidade do usuário e resultado de negócio.",
   linkedin: "https://www.linkedin.com/in/gabriella-marques-severo-1b93216/",
+  whatsapp: {
+    display: "(11) 96081-8748",
+    href: "https://wa.me/5511960818748",
+  },
+  email: "gabriella.severo@gmail.com",
   photo: "/images/profile/gabriella.jpg",
   years: "15+",
   focus: ["Product Design", "Design Leadership", "UX Research", "Arquitetura de Informação"],
