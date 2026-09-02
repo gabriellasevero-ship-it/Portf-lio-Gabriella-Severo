@@ -1,5 +1,21 @@
+import type { CSSProperties } from "react";
 import { profile, skills, education, clients } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+
+/** Flex-grow ≈ logo aspect ratio so desktop can keep one uniform-height row. */
+const CLIENT_GROW: Record<string, number> = {
+  Natura: 7.3,
+  Safra: 3.2,
+  Pismo: 7.2,
+  Fastcash: 4.2,
+  "Itaú": 1.2,
+  Santander: 5.7,
+  Caixa: 3.8,
+  Audi: 2.8,
+  ESPN: 3.5,
+  "Johnson & Johnson": 5.5,
+  Vivo: 3.6,
+};
 
 export function About() {
   return (
@@ -44,19 +60,24 @@ export function About() {
         <h3 className="mb-5 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
           Marcas e clientes
         </h3>
-        <ul className="flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1 [scrollbar-width:thin] md:gap-x-7">
+        <ul className="flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1 [scrollbar-width:thin] md:gap-x-4 md:overflow-x-hidden lg:gap-x-5">
           {clients.map((client) => (
             <li
               key={client.name}
-              className="flex h-10 shrink-0 items-center justify-center"
+              style={
+                {
+                  "--logo-grow": CLIENT_GROW[client.name] ?? 1,
+                } as CSSProperties
+              }
+              className="flex h-10 shrink-0 items-center justify-center md:min-w-0 md:shrink md:basis-0 md:[flex-grow:var(--logo-grow)]"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={client.logo}
                 alt={client.name}
                 className={cn(
-                  "h-full w-auto object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0",
-                  client.compact && "max-h-[86%] max-w-[86%]",
+                  "h-full w-auto object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 md:h-auto md:max-h-10 md:w-full",
+                  client.compact && "max-h-[86%] max-w-[86%] md:max-w-full",
                 )}
               />
             </li>
