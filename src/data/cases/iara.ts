@@ -15,6 +15,12 @@ export const iaraCase = {
   ],
   summary:
     "A Iara nasceu para tirar Consultoras de Beleza do escuro sobre o próprio estoque: 88% estocam produtos, mas operam sem visão de lucro, validade e prioridade de compra. Em vez de mais um app complexo, validamos um assistente no WhatsApp — primeiro com experimento Concierge (Mágico de Oz) e depois evoluindo para MVP conversacional.",
+  branding: "/images/cases/iara/branding-iara.png",
+  stockReality: {
+    title: "A realidade do estoque na ponta",
+    caption: "Estoque das consultoras — média aproximada de 150 produtos",
+    image: "/images/cases/iara/estoque-consultoras.png",
+  },
   challenge: {
     title: "O desafio",
     business:
@@ -65,7 +71,17 @@ export const iaraCase = {
       { value: "39", label: "questionários respondidos" },
       { value: "82,93%", label: "CSAT · 23 respostas" },
     ],
+    insightBox:
+      "As Consultoras esperam uma ferramenta automatizada e ágil que gerencie o estoque e as vendas para poupar tempo, oferecendo também recursos visuais, como catálogos, para potencializar o atendimento e os resultados.",
+    quotes: [
+      "Poderia auxiliar no controle de estoque, cálculo de vendas. Quais produtos vendo com mais frequência.",
+      "Que me surpreendeu, foi você achar todos os meus produtos.",
+      "Porque é muito produto. Montei uma loja em casa, acho que passa de 20 mil em produtos.",
+      "Um sistema para dar baixa nos itens que já foram vendidos.",
+      "Ter um catálogo virtual com fotos, descrição e valor do produto.",
+    ],
     image: "/images/cases/iara/nossas-escutas.png",
+    quotesImage: "/images/cases/iara/citacoes-escutas.png",
   },
   method: {
     title: "Nosso jeito de fazer",
@@ -95,6 +111,7 @@ export const iaraCase = {
       "WhatsApp",
     ],
     image: "/images/cases/iara/magico-de-oz.png",
+    processBoard: "/images/cases/iara/board-processo.png",
   },
   funnel: {
     title: "Resultados do experimento",
@@ -141,6 +158,9 @@ export const iaraCase = {
       "Taxa de conclusão de fluxos de estoque sem intervenção humana",
       "Acurácia de NLP (frequência de “não entendi”)",
     ],
+    whatsappImage: "/images/cases/iara/whatsapp-fluxo.png",
+    whatsappCaption:
+      "Fluxo no WhatsApp: cadastro por foto, reconhecimento de produtos, precificação e visão de lucro estimado.",
   },
   learnings: {
     title: "Aprendizados",

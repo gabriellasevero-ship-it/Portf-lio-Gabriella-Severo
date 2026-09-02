@@ -26,35 +26,49 @@ export default function IaraCasePage() {
               >
                 ← Projetos
               </Link>
-              <p className="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-signal">
-                Case study · {iaraCase.client}
-              </p>
-              <h1 className="mt-4 max-w-4xl font-display text-4xl leading-tight text-ink md:text-6xl text-balance">
-                {iaraCase.title}
-              </h1>
-              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink/70 md:text-xl">
-                {iaraCase.subtitle}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink/60">
-                <p>
-                  <span className="font-medium text-ink">Papel:</span>{" "}
-                  {iaraCase.role}
-                </p>
-                <p>
-                  <span className="font-medium text-ink">Período:</span>{" "}
-                  {iaraCase.year}
-                </p>
+              <div className="mt-8 grid items-end gap-10 md:grid-cols-[1.2fr_0.8fr]">
+                <div>
+                  <p className="text-xs font-semibold tracking-[0.2em] uppercase text-signal">
+                    Case study · {iaraCase.client}
+                  </p>
+                  <h1 className="mt-4 max-w-4xl font-display text-4xl leading-tight text-ink md:text-6xl text-balance">
+                    {iaraCase.title}
+                  </h1>
+                  <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink/70 md:text-xl">
+                    {iaraCase.subtitle}
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink/60">
+                    <p>
+                      <span className="font-medium text-ink">Papel:</span>{" "}
+                      {iaraCase.role}
+                    </p>
+                    <p>
+                      <span className="font-medium text-ink">Período:</span>{" "}
+                      {iaraCase.year}
+                    </p>
+                  </div>
+                  <ul className="mt-6 flex flex-wrap gap-2">
+                    {iaraCase.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="rounded-md border border-ink/10 bg-card px-3 py-1.5 text-xs font-medium tracking-wide text-ink/75 uppercase"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <figure className="overflow-hidden border border-ink/10 bg-moss-deep">
+                  <Image
+                    src={iaraCase.branding}
+                    alt="Branding da Iara — Assistente de Consultoria de Beleza Natura e Avon"
+                    width={1200}
+                    height={600}
+                    className="h-auto w-full"
+                    priority
+                  />
+                </figure>
               </div>
-              <ul className="mt-6 flex flex-wrap gap-2">
-                {iaraCase.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-md border border-ink/10 bg-card px-3 py-1.5 text-xs font-medium tracking-wide text-ink/75 uppercase"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
               <p className="mt-10 max-w-3xl text-base leading-relaxed text-ink/75 md:text-lg">
                 {iaraCase.summary}
               </p>
@@ -86,6 +100,24 @@ export default function IaraCasePage() {
                   </p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-14">
+              <h3 className="font-display text-2xl text-ink">
+                {iaraCase.stockReality.title}
+              </h3>
+              <p className="mt-2 text-sm text-ink/55">
+                {iaraCase.stockReality.caption}
+              </p>
+              <figure className="mt-6 overflow-hidden border border-ink/10 bg-card">
+                <Image
+                  src={iaraCase.stockReality.image}
+                  alt={iaraCase.stockReality.caption}
+                  width={1600}
+                  height={1000}
+                  className="h-auto w-full"
+                />
+              </figure>
             </div>
           </section>
 
@@ -200,10 +232,39 @@ export default function IaraCasePage() {
               ))}
             </div>
 
+            <div className="mt-10 border border-ink/10 bg-card p-6 md:p-8">
+              <p className="text-xs font-semibold tracking-wide text-signal uppercase">
+                Insight das escutas
+              </p>
+              <p className="mt-3 text-base leading-relaxed text-ink/75 md:text-lg">
+                {iaraCase.research.insightBox}
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-3 md:grid-cols-2">
+              {iaraCase.research.quotes.map((quote) => (
+                <blockquote
+                  key={quote}
+                  className="border-l-2 border-signal/60 bg-mist px-4 py-3 text-sm leading-relaxed text-ink/75"
+                >
+                  “{quote}”
+                </blockquote>
+              ))}
+            </div>
+
             <figure className="mt-12 overflow-hidden border border-ink/10 bg-card">
               <Image
                 src={iaraCase.research.image}
                 alt="Slide com métricas das escutas do projeto Iara"
+                width={1600}
+                height={900}
+                className="h-auto w-full"
+              />
+            </figure>
+            <figure className="mt-6 overflow-hidden border border-ink/10 bg-card">
+              <Image
+                src={iaraCase.research.quotesImage}
+                alt="Citações reais das consultoras nas escutas do projeto Iara"
                 width={1600}
                 height={900}
                 className="h-auto w-full"
@@ -255,6 +316,23 @@ export default function IaraCasePage() {
                   className="h-auto w-full"
                 />
               </figure>
+
+              <div className="mt-12">
+                <h3 className="font-display text-2xl">Board de processo</h3>
+                <p className="mt-2 max-w-2xl text-sm text-mist/70">
+                  Discovery, hipóteses, jornada do experimento, métricas e MVP —
+                  visão do trabalho de ponta a ponta no FigJam.
+                </p>
+                <figure className="mt-6 overflow-hidden bg-mist">
+                  <Image
+                    src={iaraCase.method.processBoard}
+                    alt="Board FigJam do processo completo do projeto Iara"
+                    width={2000}
+                    height={1100}
+                    className="h-auto w-full"
+                  />
+                </figure>
+              </div>
             </div>
           </section>
 
@@ -353,6 +431,25 @@ export default function IaraCasePage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="mt-14">
+                <h3 className="font-display text-2xl text-ink">
+                  Produto no WhatsApp
+                </h3>
+                <p className="mt-2 max-w-3xl text-base text-ink/65">
+                  {iaraCase.mvp.whatsappCaption}
+                </p>
+                <figure className="mt-6 overflow-hidden border border-ink/10 bg-card">
+                  <Image
+                    src={iaraCase.mvp.whatsappImage}
+                    alt="Fluxo conversacional da Iara no WhatsApp: cadastro por foto, reconhecimento e lucro"
+                    width={1800}
+                    height={900}
+                    className="h-auto w-full"
+                    priority
+                  />
+                </figure>
               </div>
             </div>
           </section>
