@@ -5,41 +5,26 @@ import { profile } from "@/data/portfolio";
 export function Hero() {
   return (
     <section id="topo" className="relative min-h-[100svh] overflow-hidden">
-      <div className="absolute inset-0 grid md:grid-cols-2">
-        <div className="relative bg-mist">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 grain"
-          >
-            <div className="animate-float absolute -left-16 top-20 h-64 w-64 rounded-[2rem] bg-signal/20 blur-3xl" />
-          </div>
-        </div>
-        <div className="relative hidden md:block">
-          <Image
-            src={profile.photo}
-            alt=""
-            fill
-            priority
-            sizes="50vw"
-            className="object-cover object-[center_18%]"
-            aria-hidden
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-mist via-mist/20 to-transparent" />
-        </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+      >
+        <div className="animate-float absolute -left-24 top-24 h-72 w-72 rounded-full bg-signal/15 blur-3xl" />
+        <div className="animate-float-slow absolute -right-16 bottom-16 h-64 w-64 rounded-full bg-moss/10 blur-3xl" />
       </div>
 
-      <div className="relative z-10 mx-auto grid min-h-[100svh] max-w-6xl items-center gap-8 px-5 pb-14 pt-24 md:grid-cols-2 md:gap-10 md:px-8 md:pb-0 md:pt-20">
-        <div className="max-w-xl">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-center gap-10 px-5 pb-16 pt-28 md:flex-row md:items-center md:justify-between md:gap-16 md:px-8 md:pb-20 md:pt-24">
+        <div className="order-2 max-w-xl text-center md:order-1 md:text-left">
           <p className="animate-rise mb-4 text-xs font-semibold tracking-[0.22em] uppercase text-signal md:text-sm">
             {profile.role} · {profile.company}
           </p>
-          <h1 className="animate-rise-delay-1 font-display text-[clamp(2.5rem,7.5vw,4.5rem)] leading-[0.95] text-ink text-balance">
+          <h1 className="animate-rise-delay-1 font-display text-[clamp(2.4rem,6.5vw,4.25rem)] leading-[0.96] text-ink text-balance">
             {profile.name}
           </h1>
-          <p className="animate-rise-delay-2 mt-5 text-base leading-relaxed text-ink/70 md:mt-6 md:text-xl">
+          <p className="animate-rise-delay-2 mx-auto mt-5 max-w-md text-base leading-relaxed text-ink/65 md:mx-0 md:mt-6 md:max-w-lg md:text-lg">
             {profile.headline}
           </p>
-          <div className="animate-rise-delay-3 mt-7 flex flex-wrap items-center gap-3 md:mt-8">
+          <div className="animate-rise-delay-3 mt-7 flex flex-wrap items-center justify-center gap-3 md:mt-8 md:justify-start">
             <Button asChild size="lg" className="h-11 rounded-md px-6 text-base">
               <a href="#projetos">Ver projetos</a>
             </Button>
@@ -47,7 +32,7 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="h-11 rounded-md border-ink/15 bg-card/80 px-6 text-base backdrop-blur-sm"
+              className="h-11 rounded-md border-ink/12 bg-card/70 px-6 text-base backdrop-blur-sm"
             >
               <a href={profile.linkedin} target="_blank" rel="noreferrer">
                 Conversar no LinkedIn
@@ -56,22 +41,18 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="animate-rise-delay-2 relative md:hidden">
-          <div className="relative aspect-[3/4] w-full overflow-hidden">
+        <div className="animate-rise-delay-2 order-1 md:order-2">
+          <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-full ring-1 ring-ink/10 md:h-56 md:w-56 lg:h-64 lg:w-64">
             <Image
               src={profile.photo}
               alt={`Foto de ${profile.name}`}
               fill
               priority
-              sizes="90vw"
+              sizes="(max-width: 768px) 176px, (max-width: 1024px) 224px, 256px"
               className="object-cover object-[center_18%]"
             />
           </div>
         </div>
-
-        <span className="sr-only">
-          Foto de perfil de {profile.name}
-        </span>
       </div>
     </section>
   );
