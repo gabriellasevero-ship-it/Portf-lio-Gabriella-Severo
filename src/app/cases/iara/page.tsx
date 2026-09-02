@@ -191,16 +191,6 @@ export default function IaraCasePage() {
                   ))}
                 </ol>
               </div>
-
-              <figure className="mt-12 overflow-hidden border border-ink/10 bg-card">
-                <Image
-                  src={iaraCase.audience.image}
-                  alt="Slide com o público-alvo do experimento Iara"
-                  width={1600}
-                  height={900}
-                  className="h-auto w-full"
-                />
-              </figure>
             </div>
           </section>
 
@@ -256,15 +246,6 @@ export default function IaraCasePage() {
               <Image
                 src={iaraCase.research.image}
                 alt="Slide com métricas das escutas do projeto Iara"
-                width={1600}
-                height={900}
-                className="h-auto w-full"
-              />
-            </figure>
-            <figure className="mt-6 overflow-hidden border border-ink/10 bg-card">
-              <Image
-                src={iaraCase.research.quotesImage}
-                alt="Citações reais das consultoras nas escutas do projeto Iara"
                 width={1600}
                 height={900}
                 className="h-auto w-full"

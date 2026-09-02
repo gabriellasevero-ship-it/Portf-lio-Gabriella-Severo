@@ -55,7 +55,6 @@ export const iaraCase = {
       "Manter atualizado",
       "Ter visibilidade",
     ],
-    image: "/images/cases/iara/publico-alvo.png",
   },
   research: {
     title: "Discovery e escutas",
@@ -82,7 +81,6 @@ export const iaraCase = {
       "Ter um catálogo virtual com fotos, descrição e valor do produto.",
     ],
     image: "/images/cases/iara/nossas-escutas.png",
-    quotesImage: "/images/cases/iara/citacoes-escutas.png",
   },
   method: {
     title: "Nosso jeito de fazer",
