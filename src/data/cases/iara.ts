@@ -8,13 +8,14 @@ export const iaraCase = {
   year: "2023 — atual",
   tags: [
     "Product Design",
+    "IA conversacional",
     "Design Conversacional",
     "Discovery",
     "Experimento Concierge",
     "MVP",
   ],
   summary:
-    "A Iara nasceu para tirar Consultoras de Beleza do escuro sobre o próprio estoque: 88% estocam produtos, mas operam sem visão de lucro, validade e prioridade de compra. Em vez de mais um app complexo, validamos um assistente no WhatsApp — primeiro com experimento Concierge (Mágico de Oz) e depois evoluindo para MVP conversacional.",
+    "A Iara nasceu para tirar Consultoras de Beleza do escuro sobre o próprio estoque: 88% estocam produtos, mas operam sem visão de lucro, validade e prioridade de compra. Em vez de mais um app complexo, validamos um assistente inteligente no WhatsApp — primeiro com experimento Concierge (Mágico de Oz) e depois evoluindo para um MVP com IA conversacional.",
   branding: "/images/cases/iara/branding-iara.png",
   stockReality: {
     title: "A realidade do estoque na ponta",
@@ -87,15 +88,15 @@ export const iaraCase = {
     title: "Nosso jeito de fazer",
     quote: "Não construa em massa até que muitos queiram.",
     description:
-      "Nas interações usamos um componente Mágico de Oz: processos assistidos por humanos nos bastidores para testar rápido, antes de automatizar ou desenvolver em escala.",
+      "Nas interações usamos um componente Mágico de Oz: processos assistidos por humanos nos bastidores para testar rápido a proposta de valor — e só então automatizar com IA conversacional e desenvolver em escala.",
     pillars: [
       {
         title: "Visibilidade",
-        text: "A Consultora enviava fotos ou áudios do estoque e recebia de volta uma visão organizada do inventário.",
+        text: "A Consultora enviava fotos ou áudios do estoque e a Iara devolvia uma visão organizada do inventário — caminho que depois a IA passou a reconhecer e estruturar.",
       },
       {
         title: "Automação humanizada",
-        text: "Simulamos baixa e adição de itens por conversa natural, sem forçar formulários.",
+        text: "Simulamos baixa e adição de itens por conversa natural, sem forçar formulários — base para o assistente com IA no WhatsApp.",
       },
       {
         title: "Insights financeiros",
@@ -105,7 +106,7 @@ export const iaraCase = {
     stack: [
       "Roteiro de mensagens",
       "Planilha de cadastros",
-      "Gemini",
+      "Gemini (IA generativa)",
       "Backoffice de estoque",
       "Time H2",
       "WhatsApp",
@@ -134,33 +135,33 @@ export const iaraCase = {
   mvp: {
     title: "Do Concierge ao MVP",
     description:
-      "Com a proposta de valor validada, o desafio passou a ser técnico e experiencial: automatizar mantendo empatia e simplicidade do atendimento humano.",
+      "Com a proposta de valor validada, o desafio passou a ser técnico e experiencial: evoluir o Concierge para um assistente com IA no WhatsApp — reconhecimento de produtos, conversa natural e insights de lucro — sem perder empatia e simplicidade do atendimento humano.",
     deliverables: [
       {
         title: "Service Blueprint",
-        text: "Mapeamos jornada visível, automação do bot, APIs de estoque e pontos de transbordo humano.",
+        text: "Mapeamos jornada visível, automação do bot com IA, APIs de estoque e pontos de transbordo humano.",
       },
       {
         title: "Voice Chart e tom",
-        text: "Iara como parceira de negócio: foco em lucro, linguagem direta e acolhedora, sem jargão de TI.",
+        text: "Iara como parceira de negócio: foco em lucro, linguagem direta e acolhedora, sem jargão de TI — inclusive no tom das respostas geradas pela IA.",
       },
       {
         title: "Fluxos conversacionais",
-        text: "Caminho feliz (foto → identificação → confirmação) e reparação de erros sem culpar a usuária.",
+        text: "Caminho feliz (foto → identificação com IA → confirmação) e reparação de erros sem culpar a usuária.",
       },
       {
         title: "Protótipo WhatsApp",
-        text: "Quick replies e list messages da WhatsApp Business API para reduzir digitação e erro de input.",
+        text: "Quick replies e list messages da WhatsApp Business API para reduzir digitação e erro de input, em diálogo com o modelo de IA.",
       },
     ],
     metrics: [
       "Retenção após a primeira semana",
       "Taxa de conclusão de fluxos de estoque sem intervenção humana",
-      "Acurácia de NLP (frequência de “não entendi”)",
+      "Acurácia de NLP / IA (frequência de “não entendi”)",
     ],
     whatsappImage: "/images/cases/iara/whatsapp-fluxo.png",
     whatsappCaption:
-      "Fluxo no WhatsApp: cadastro por foto, reconhecimento de produtos, precificação e visão de lucro estimado.",
+      "Fluxo no WhatsApp com IA: cadastro por foto, reconhecimento de produtos, precificação e visão de lucro estimado.",
   },
   learnings: {
     title: "Aprendizados",
@@ -176,6 +177,6 @@ export const iaraCase = {
     ],
   },
   conclusion:
-    "O Projeto Iara não foi só criar um bot de estoque. Foi empoderar a Consultora Natura com dados que ela já tinha, mas não conseguia visualizar — transformando desorganização em controle financeiro pela tecnologia mais acessível: a conversa.",
+    "O Projeto Iara não foi só criar um bot de estoque. Foi empoderar a Consultora Natura com dados que ela já tinha, mas não conseguia visualizar — usando IA conversacional no WhatsApp para transformar desorganização em controle financeiro pela tecnologia mais acessível: a conversa.",
   pdf: "/images/cases/iara/Case_Iara.pdf",
 };

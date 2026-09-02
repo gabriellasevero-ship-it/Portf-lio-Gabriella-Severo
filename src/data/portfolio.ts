@@ -72,9 +72,9 @@ export const projects = [
     title: "Iara — assistente de estoque e lucro no WhatsApp",
     client: "Natura &Co",
     year: "2023 — atual",
-    tags: ["Product Design", "Design Conversacional", "MVP"],
+    tags: ["Product Design", "IA conversacional", "MVP"],
     description:
-      "De experimento Concierge a MVP: ajudamos Consultoras a enxergar estoque, validade e lucro sem sair do WhatsApp.",
+      "De experimento Concierge a MVP: assistente com IA no WhatsApp para Consultoras enxergarem estoque, validade e lucro sem sair do chat.",
     href: "/cases/iara",
   },
   {
@@ -149,6 +149,7 @@ export const education = [
 export const skills = [
   "Design Leadership",
   "Product Design",
+  "Design com IA",
   "Discovery & Co-criação",
   "Pesquisa com usuários",
   "Testes de usabilidade",
