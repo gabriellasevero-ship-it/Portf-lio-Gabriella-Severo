@@ -78,12 +78,13 @@ export const projects = [
     href: "/cases/iara",
   },
   {
-    title: "Experiência digital para consultoras Natura & Avon",
+    title: "Social Commerce — experiência digital para Consultoras",
     client: "Natura &Co",
     year: "2023 — atual",
-    tags: ["Design Leadership", "Product Design", "Serviços digitais"],
+    tags: ["Product Design", "Design Leadership", "Serviços digitais"],
     description:
-      "Liderança de design para serviços que ajudam consultoras a prestar consultoria de qualidade, vender melhor e gerenciar clientes com mais clareza no dia a dia.",
+      "Serviços digitais mais claros e aderentes ao dia a dia das Consultoras de Beleza: vendas, clientes, pedidos e operação em escala.",
+    href: "/cases/social-commerce",
   },
   {
     title: "Novo App Safra PF",
