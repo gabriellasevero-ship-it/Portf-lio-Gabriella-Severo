@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { projects } from "@/data/portfolio";
 
+const FEATURED_COUNT = 3;
+
 export function Projects() {
+  const featured = projects.slice(0, FEATURED_COUNT);
+  const grid = projects.slice(FEATURED_COUNT);
+
   return (
     <section id="projetos" className="scroll-mt-24 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -16,7 +21,7 @@ export function Projects() {
         </p>
 
         <div className="mt-12 divide-y divide-ink/10 border-y border-ink/10">
-          {projects.map((project, index) => {
+          {featured.map((project, index) => {
             const content = (
               <>
                 <p className="font-display text-2xl text-signal md:pt-1 md:text-3xl">
@@ -76,6 +81,41 @@ export function Projects() {
             );
           })}
         </div>
+
+        {grid.length > 0 ? (
+          <div className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-ink/10 bg-ink/10 md:mt-10 md:grid-cols-2">
+            {grid.map((project, index) => (
+              <article
+                key={project.title}
+                className="flex h-full flex-col bg-background p-6 md:p-8"
+              >
+                <p className="font-display text-2xl text-signal md:text-3xl">
+                  {String(FEATURED_COUNT + index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-4 font-display text-xl leading-snug text-ink md:text-2xl">
+                  {project.title}
+                </h3>
+                <p className="mt-3 flex-1 text-base leading-relaxed text-ink/65">
+                  {project.description}
+                </p>
+                <div className="mt-6">
+                  <p className="text-sm font-medium text-ink">{project.client}</p>
+                  <p className="mt-1 text-sm text-ink/50">{project.year}</p>
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="text-xs font-medium tracking-wide text-signal uppercase"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );
