@@ -162,18 +162,18 @@ export const skills = [
 ];
 
 export const clients = [
-  "Natura",
-  "Avon",
-  "Safra",
-  "Pismo",
-  "Fastcash",
-  "Itaú",
-  "Santander",
-  "Caixa",
-  "Audi",
-  "ESPN",
-  "Johnson & Johnson",
-  "Vivo",
+  { name: "Natura", logo: "/images/clients/natura.svg" },
+  { name: "Avon", logo: "/images/clients/avon.svg" },
+  { name: "Safra", logo: "/images/clients/safra.svg" },
+  { name: "Pismo", logo: "/images/clients/pismo.svg" },
+  { name: "Fastcash", logo: "/images/clients/fastcash.svg" },
+  { name: "Itaú", logo: "/images/clients/itau.svg" },
+  { name: "Santander", logo: "/images/clients/santander.svg" },
+  { name: "Caixa", logo: "/images/clients/caixa.svg" },
+  { name: "Audi", logo: "/images/clients/audi.svg" },
+  { name: "ESPN", logo: "/images/clients/espn.svg" },
+  { name: "Johnson & Johnson", logo: "/images/clients/jj.svg" },
+  { name: "Vivo", logo: "/images/clients/vivo.svg" },
 ];
 
 export const recommendations = [

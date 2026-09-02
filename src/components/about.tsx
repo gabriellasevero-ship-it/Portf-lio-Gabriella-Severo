@@ -38,16 +38,25 @@ export function About() {
               ))}
             </ul>
           </div>
-
-          <div>
-            <h3 className="mb-4 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
-              Marcas e clientes
-            </h3>
-            <p className="text-base leading-relaxed text-ink/65">
-              {clients.join(" · ")}
-            </p>
-          </div>
         </div>
+      </div>
+
+      <div className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
+        <h3 className="mb-6 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
+          Marcas e clientes
+        </h3>
+        <ul className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-8 md:gap-y-10">
+          {clients.map((client) => (
+            <li key={client.name} className="flex items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-8 w-auto max-w-[132px] object-contain opacity-65 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 md:h-9"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
