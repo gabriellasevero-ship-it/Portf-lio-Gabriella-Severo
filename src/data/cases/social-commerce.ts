@@ -74,6 +74,12 @@ export const socialCommerceCase = {
       "Integrações com WhatsApp, entrega e pagamento",
       "Visão 360º do cliente e portfólio unificado",
     ],
+    canvas: {
+      src: "/images/cases/social-commerce/proposta-valor-vpc.jpg",
+      alt: "Diagrama de Proposta de Valor (Value Proposition Canvas) para o projeto de Social Commerce, mostrando o Mapa de Valor e o Perfil da Consultora com post-its detalhando ganhos, dores e tarefas.",
+      caption:
+        "Canvas de Proposta de Valor detalhando a estratégia de Social Commerce para consultoras.",
+    },
   },
   personas: {
     title: "Personas de Consultoras",
@@ -131,6 +137,26 @@ export const socialCommerceCase = {
   roleDetail: {
     title: "Meu papel",
     text: "Product Designer atuando de forma estratégica e hands-on, contribuindo para decisões de experiência, definição de escopo e evolução dos serviços digitais.",
+    images: [
+      {
+        src: "/images/cases/social-commerce/nature-v2-design-system.png",
+        alt: "Documentação técnica do design system Nature v2, detalhando especificações de grid responsivo, paleta de cores, tipografia, elevação e estilos de componentes.",
+        caption:
+          "Diretrizes visuais do design system Nature v2 aplicado ao projeto.",
+      },
+      {
+        src: "/images/cases/social-commerce/ui-components.png",
+        alt: "Documentação de componentes de UI do design system, incluindo botões, ícones, FABs e atalhos, detalhando estados de interação e anatomia dos elementos.",
+        caption:
+          "Biblioteca de componentes — botões, ícones, FABs e atalhos com estados e anatomia.",
+      },
+      {
+        src: "/images/cases/social-commerce/sacola-checkout-figma.png",
+        alt: "Captura de tela do Figma exibindo o design de fluxos de checkout e sacola de compras mobile para o projeto Social Commerce, com foco em pagamentos via Pix.",
+        caption:
+          "Detalhamento dos fluxos de sacola e checkout mobile no Figma, incluindo jornadas de fulfillment e pagamento.",
+      },
+    ],
   },
   process: {
     title: "Processo",

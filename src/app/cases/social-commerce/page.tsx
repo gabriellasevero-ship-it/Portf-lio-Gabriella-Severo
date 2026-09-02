@@ -160,6 +160,18 @@ export default function SocialCommerceCasePage() {
                 </ul>
               </div>
             </div>
+            <figure className="mt-10 overflow-hidden border border-ink/10 bg-card">
+              <Image
+                src={socialCommerceCase.valueFit.canvas.src}
+                alt={socialCommerceCase.valueFit.canvas.alt}
+                width={1600}
+                height={820}
+                className="h-auto w-full"
+              />
+              <figcaption className="border-t border-ink/10 bg-mist px-4 py-3 text-sm leading-relaxed text-ink/65">
+                {socialCommerceCase.valueFit.canvas.caption}
+              </figcaption>
+            </figure>
           </section>
 
           <section className="bg-moss-deep py-16 text-mist md:py-20">
@@ -279,6 +291,25 @@ export default function SocialCommerceCasePage() {
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink/70">
                 {socialCommerceCase.roleDetail.text}
               </p>
+              <div className="mt-10 space-y-8">
+                {socialCommerceCase.roleDetail.images.map((image) => (
+                  <figure
+                    key={image.src}
+                    className="overflow-hidden border border-ink/10 bg-card"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={1600}
+                      height={1000}
+                      className="h-auto w-full"
+                    />
+                    <figcaption className="border-t border-ink/10 bg-mist px-4 py-3 text-sm leading-relaxed text-ink/65">
+                      {image.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
               <ol className="mt-10 grid gap-4 md:grid-cols-2">
                 {socialCommerceCase.process.steps.map((step, index) => (
                   <li
