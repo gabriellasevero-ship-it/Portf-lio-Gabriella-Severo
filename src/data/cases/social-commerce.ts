@@ -139,6 +139,12 @@ export const socialCommerceCase = {
     text: "Product Designer atuando de forma estratégica e hands-on, contribuindo para decisões de experiência, definição de escopo e evolução dos serviços digitais.",
     images: [
       {
+        src: "/images/cases/social-commerce/metodologia-sitemap.png",
+        alt: "Board de metodologia com seis etapas (discovery, benchmark, pesquisa, co-criação, prototipação e QA) e sitemap do Social Commerce a partir da Home deslogada, com cadastro, login e home logada.",
+        caption:
+          "Metodologia de trabalho e mapa de fluxos — da Home deslogada ao cadastro, login e jornadas da home logada.",
+      },
+      {
         src: "/images/cases/social-commerce/nature-v2-design-system.png",
         alt: "Documentação técnica do design system Nature v2, detalhando especificações de grid responsivo, paleta de cores, tipografia, elevação e estilos de componentes.",
         caption:
