@@ -25,7 +25,7 @@ export function Contact() {
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-mist/75 md:text-lg">
                 Aberta a trocas sobre design de produto, gestão de times e
-                experiências digitais em escala. O canal mais rápido é o WhatsApp.
+                experiências digitais em escala.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                 <Button
