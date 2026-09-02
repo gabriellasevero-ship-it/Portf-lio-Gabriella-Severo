@@ -37,7 +37,7 @@ export function SiteHeader() {
           href="#topo"
           className="font-display text-lg tracking-tight text-ink md:text-xl"
         >
-          Portfólio<span className="text-signal">.</span>
+          Gabriella<span className="text-signal">.</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">
