@@ -7,33 +7,129 @@ export const socialCommerceCase = {
   year: "2023 — atual",
   tags: [
     "Product Design",
-    "Design Leadership",
     "Discovery",
+    "IA",
+    "Personas",
     "Serviços digitais",
-    "Social Commerce",
   ],
   summary:
-    "A Natura &Co possui uma das maiores redes de venda direta do mundo. As Consultoras de Beleza dependem de soluções digitais para gerenciar vendas, clientes, pedidos e estoque em um ecossistema complexo e de grande escala. Este case mostra como o design ajudou a tornar esses serviços mais claros, aderentes e orientados à ação no dia a dia da consultoria.",
+    "A Natura &Co é líder em venda por relações na LatAm, mas ainda havia potencial não capturado na digitalização. O Social Commerce busca unificar jornadas fragmentadas e apoiar Consultoras de Beleza com serviços digitais mais claros, aderentes e orientados à ação — do discovery à evolução de produto.",
+  commitment: {
+    title: "Nosso compromisso",
+    items: [
+      "Expandir a atuação empreendedora das consultoras",
+      "Maior personalização e conveniência para os clientes identificados",
+      "Levar o jeito único de fazer consultoria de beleza para redes e canais digitais",
+    ],
+    image: "/images/cases/social-commerce/compromisso.png",
+  },
   context: {
     title: "Contexto",
     text: "A Natura &Co possui uma das maiores redes de venda direta do mundo. As Consultoras de Beleza dependem de soluções digitais para gerenciar vendas, clientes, pedidos e estoque em um ecossistema complexo e de grande escala.",
   },
   problem: {
     title: "Problema",
-    items: [
+    headline:
+      "Somos líderes de mercado na LatAm, mas ainda existe potencial não capturado na digitalização da venda por relações.",
+    pillars: [
       {
-        title: "Jornadas fragmentadas",
-        text: "A experiência digital se espalhava por fluxos e pontos de contato pouco conectados, dificultando uma visão contínua da operação.",
+        title: "Não conhecemos o cliente final",
+        text: "A CB não tem apoio suficiente para ativar clientes e personalizar ofertas.",
       },
       {
-        title: "Gestão de vendas e clientes",
-        text: "Consultoras enfrentavam dificuldade para acompanhar vendas, pedidos e relacionamento com clientes de forma clara e acionável.",
+        title: "Dependemos do modelo físico",
+        text: "Impressão e distribuição de impressos limitam time-to-market e aumentam impacto ambiental.",
       },
       {
-        title: "Baixa aderência ao dia a dia",
-        text: "Parte das soluções digitais não refletia a rotina real da consultoria — o que reduz uso, confiança e resultado.",
+        title: "Falta de apoio na gestão do negócio",
+        text: "Capital de giro, calotes e estoque parado ainda são dores centrais das CBs.",
+      },
+      {
+        title: "Baixa orientação ao sell-out",
+        text: "Incentivos, reconhecimento e pricing ainda são centrados no sell-in.",
       },
     ],
+    experienceIssues: [
+      "Jornadas fragmentadas",
+      "Dificuldade na gestão de vendas e clientes",
+      "Soluções pouco aderentes ao dia a dia real das consultoras",
+    ],
+    image: "/images/cases/social-commerce/potencial-digital.png",
+  },
+  valueFit: {
+    title: "Proposta de valor",
+    pains: [
+      "Múltiplos canais e links de venda",
+      "Trabalho manual (prints, cobrança, cadastro)",
+      "Medo de perder cliente para o site da marca",
+      "Estoque limitado ao ciclo e pouca autonomia",
+    ],
+    gains: [
+      "Atender mais clientes com menos atrito",
+      "Engajamento e comunicação otimizados",
+      "Estoque digital compartilhado / pronta entrega",
+      "Gestão financeira e ganhos em um só lugar",
+    ],
+    relievers: [
+      "Ferramenta única de vendas + CRM",
+      "Navegação mais simples e ativação sem fricção",
+      "Integrações com WhatsApp, entrega e pagamento",
+      "Visão 360º do cliente e portfólio unificado",
+    ],
+  },
+  personas: {
+    title: "Personas de Consultoras",
+    items: [
+      {
+        name: "Bruna",
+        type: "Tradicional",
+        share: "75% das CBs",
+        quote: "Os meus clientes são clientes mais antigos.",
+        note: "Kits promocionais para estoque; cobrança é uma das maiores dores. Canal principal: WhatsApp.",
+      },
+      {
+        name: "Danielle",
+        type: "Versátil",
+        share: "24% das CBs",
+        quote: "Se eu não tenho pronta-entrega eu tento pelo Espaço Digital.",
+        note: "Usa o digital como receita incremental, combinando grupos e listas no WhatsApp.",
+      },
+      {
+        name: "Juliana",
+        type: "Super digital",
+        share: "1% das CBs",
+        quote: "90% das minhas vendas são pelo digital.",
+        note: "Vende com reviews, cupons e promoções em várias redes. Instagram como canal forte.",
+      },
+    ],
+    image: "/images/cases/social-commerce/personas.png",
+  },
+  research: {
+    title: "Discovery e escutas",
+    findings: [
+      "Compra digital já é hábito em vários perfis; falta conhecimento amplo das ferramentas Natura.",
+      "A ferramenta precisa de benefício claro e diferenciação para gerar adoção.",
+      "Revista Interativa é vista como mais próxima da “ferramenta ideal” do que o espaço digital padrão.",
+      "Há demanda por uma ferramenta principal que dê autonomia e relevância ao trabalho da CB.",
+    ],
+    stats: [
+      { value: "88%", label: "trabalham com estoque / pronta entrega" },
+      { value: "73%", label: "já perderam venda por falta de produto" },
+      { value: "45%", label: "usam digital para atender clientes distantes" },
+    ],
+    quotes: [
+      "Tenho medo de a pessoa comprar no site da Natura sem me selecionar como consultora.",
+      "O que falta é um espaço para listar produtos de pronta entrega.",
+      "Se não tenho no estoque, vendo pelo Espaço Digital.",
+      "90% das minhas vendas são pelo digital.",
+    ],
+    numbers: {
+      founders: "30 consultoras fundadoras",
+      feedbacks: "283 feedbacks (Minha Loja 159 · Seller Center 124)",
+      followUp: "30 dias de acompanhamento no WhatsApp e plataforma",
+      events: "5 eventos de lançamento e escuta",
+      image: "/images/cases/social-commerce/numeros-pesquisa.png",
+    },
   },
   roleDetail: {
     title: "Meu papel",
@@ -49,30 +145,44 @@ export const socialCommerceCase = {
       "Prototipação e validação (Figma)",
       "Acompanhamento em QA e homologação",
     ],
+    sitemapImage: "/images/cases/social-commerce/sitemap.jpg",
   },
   solutions: {
     title: "Soluções",
     items: [
       {
         title: "Serviços digitais para a consultoria",
-        text: "Produtos e fluxos pensados para apoiar a Consultora de Beleza na operação do dia a dia — não só na interface, mas no serviço.",
+        text: "Produtos e fluxos pensados para apoiar a CB na operação do dia a dia — vendas, clientes, pedidos e divulgação.",
       },
       {
         title: "Interfaces claras e orientadas à ação",
         text: "Priorizamos simplicidade, hierarquia e caminhos objetivos para reduzir atrito em tarefas frequentes.",
       },
       {
-        title: "Melhor organização de clientes e pedidos",
-        text: "Informações mais estruturadas para ajudar a consultora a vender, acompanhar e atender com mais clareza.",
+        title: "Organização de clientes e pedidos",
+        text: "Informações mais estruturadas para vender, acompanhar e atender com mais clareza.",
       },
     ],
+    panel: {
+      title: "Painel de vendas",
+      subtitle: "Gestão eficiente e centralizada",
+      features: [
+        { title: "Vendas", text: "Registro de pedidos e vendas da plataforma" },
+        { title: "Estoque", text: "Controle integrado com sell-in" },
+        { title: "Clientes", text: "Carteira e preferências" },
+        { title: "Relatórios", text: "Acesso, vendas e performance" },
+        { title: "Divulgação", text: "Material de apoio" },
+        { title: "Cupons", text: "Geração de cupons" },
+      ],
+      image: "/images/cases/social-commerce/painel-vendas.png",
+    },
   },
   results: {
     title: "Resultados",
     items: [
       "Melhoria da experiência digital das consultoras",
       "Maior aderência aos produtos digitais",
-      "Base estruturada para evolução contínua",
+      "Base estruturada para evolução contínua do Social Commerce",
     ],
   },
   learnings: {
@@ -80,14 +190,18 @@ export const socialCommerceCase = {
     items: [
       {
         title: "Simplicidade em escala",
-        text: "Em produtos de grande escala, simplicidade não é detalhe visual — é requisito de adoção.",
+        text: "Com 75% da base tradicional, simplicidade não é detalhe — é condição de adoção.",
       },
       {
         title: "Contexto real muda decisão",
-        text: "Entender o dia a dia da consultora muda priorização, escopo e o que vale (ou não) construir.",
+        text: "Personas, dores e hábitos de compra mudam priorização e o que vale construir primeiro.",
+      },
+      {
+        title: "Unificar é aliviar dor",
+        text: "A principal proposta de valor não é “mais um canal”: é reduzir fragmentação e dar autonomia à CB.",
       },
     ],
   },
   conclusion:
-    "Social Commerce, neste contexto, é apoiar a Consultora de Beleza com uma experiência digital que respeita a complexidade do negócio — e entrega clareza suficiente para ela vender, gerenciar e evoluir no dia a dia.",
+    "Social Commerce, neste contexto, é digitalizar a venda por relações sem perder o papel da Consultora — unificando jornadas, apoiando a gestão do negócio e levando a consultoria de beleza para os canais digitais com clareza e aderência.",
 };
