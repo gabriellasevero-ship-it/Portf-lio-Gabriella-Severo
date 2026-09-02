@@ -101,12 +101,12 @@ export const projects = [
     href: "/cases/cockpit",
   },
   {
-    title: "Novo App Safra PF",
+    title: "Novo Internet Banking Safra PF",
     client: "Banco Safra",
     year: "2020 — 2021",
-    tags: ["Mobile", "Arquitetura de Informação", "UI"],
+    tags: ["Mobile", "Desktop", "Arquitetura de Informação", "UI"],
     description:
-      "Nova interface e arquitetura de informação do aplicativo para pessoas físicas, com fluxos mais claros para o cotidiano bancário.",
+      "Nova interface e arquitetura de informação do aplicativo e desktop para pessoas físicas, com fluxos mais claros para o cotidiano bancário e investimentos.",
   },
   {
     title: "Minha Conta para tablets",
