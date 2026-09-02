@@ -1,4 +1,5 @@
 import { profile, skills, education, clients } from "@/data/portfolio";
+import { cn } from "@/lib/utils";
 
 export function About() {
   return (
@@ -53,7 +54,10 @@ export function About() {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-full w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                    className={cn(
+                      "h-full w-full object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0",
+                      client.compact && "max-h-[86%] max-w-[86%]",
+                    )}
                   />
                 </li>
               ))}

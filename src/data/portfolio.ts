@@ -168,16 +168,16 @@ export const skills = [
   "Facilitação de workshops",
 ];
 
-export const clients = [
+export const clients: { name: string; logo: string; compact?: boolean }[] = [
   { name: "Natura", logo: "/images/clients/natura.svg" },
   { name: "Safra", logo: "/images/clients/safra.png" },
   { name: "Pismo", logo: "/images/clients/pismo.png" },
   { name: "Fastcash", logo: "/images/clients/fastcash.png" },
   { name: "Itaú", logo: "/images/clients/itau.svg" },
   { name: "Santander", logo: "/images/clients/santander.svg" },
-  { name: "Caixa", logo: "/images/clients/caixa.svg" },
+  { name: "Caixa", logo: "/images/clients/caixa.svg", compact: true },
   { name: "Audi", logo: "/images/clients/audi.svg" },
-  { name: "ESPN", logo: "/images/clients/espn.svg" },
+  { name: "ESPN", logo: "/images/clients/espn.svg", compact: true },
   { name: "Johnson & Johnson", logo: "/images/clients/jj.svg" },
   { name: "Vivo", logo: "/images/clients/vivo.svg" },
 ];
