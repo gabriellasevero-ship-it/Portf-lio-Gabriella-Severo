@@ -176,6 +176,29 @@ export const socialCommerceCase = {
       ],
       image: "/images/cases/social-commerce/painel-vendas.png",
     },
+    videos: [
+      {
+        title: "Minha Loja",
+        caption:
+          "Espaço digital da consultora: marcas Natura e Avon, busca, lançamentos e atalhos para estoque e venda.",
+        src: "/videos/social-commerce/minha_loja.mp4",
+        poster: "/images/cases/social-commerce/posters/minha-loja.jpg",
+      },
+      {
+        title: "Seller Center — visão geral",
+        caption:
+          "Home da consultoria com notícias, atalhos de pedido, boletos e vendas em uma navegação orientada à ação.",
+        src: "/videos/social-commerce/sellercenter_geral.mp4",
+        poster: "/images/cases/social-commerce/posters/sellercenter-geral.jpg",
+      },
+      {
+        title: "Seller Center — vendas",
+        caption:
+          "Módulo de vendas para acompanhar pedidos e performance com mais clareza no dia a dia.",
+        src: "/videos/social-commerce/sellercenter_vendas.mp4",
+        poster: "/images/cases/social-commerce/posters/sellercenter-vendas.jpg",
+      },
+    ],
   },
   results: {
     title: "Resultados",

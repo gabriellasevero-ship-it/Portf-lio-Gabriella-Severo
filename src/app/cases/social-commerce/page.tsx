@@ -377,6 +377,40 @@ export default function SocialCommerceCasePage() {
                 />
               </figure>
             </div>
+
+            <div className="mt-16">
+              <h3 className="font-display text-2xl text-ink">
+                Produto em movimento
+              </h3>
+              <p className="mt-2 max-w-3xl text-base text-ink/65">
+                Em vez de telas estáticas, os vídeos mostram os fluxos reais de
+                Minha Loja e Seller Center no celular da consultora.
+              </p>
+              <div className="mt-8 grid gap-8 md:grid-cols-3">
+                {socialCommerceCase.solutions.videos.map((video) => (
+                  <figure key={video.src} className="space-y-3">
+                    <div className="overflow-hidden border border-ink/10 bg-moss-deep">
+                      <video
+                        className="aspect-[9/16] h-auto w-full bg-black object-contain"
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={video.poster}
+                      >
+                        <source src={video.src} type="video/mp4" />
+                        Seu navegador não suporta vídeo HTML5.
+                      </video>
+                    </div>
+                    <figcaption>
+                      <p className="font-medium text-ink">{video.title}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-ink/65">
+                        {video.caption}
+                      </p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
           </section>
 
           <section className="bg-card/60 py-16 md:py-20">
