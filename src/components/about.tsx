@@ -23,47 +23,45 @@ export function About() {
           </p>
         </div>
 
-        <div className="space-y-10">
-          <div>
-            <h3 className="mb-4 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
-              Formação
-            </h3>
-            <ul className="space-y-4">
-              {education.map((item) => (
-                <li key={item.title} className="border-b border-ink/10 pb-4">
-                  <p className="font-medium text-ink">{item.title}</p>
-                  <p className="mt-1 text-sm text-ink/55">
-                    {item.school} · {item.period}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-5 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
-              Marcas e clientes
-            </h3>
-            <ul className="grid grid-cols-2 gap-x-5 gap-y-4">
-              {clients.map((client) => (
-                <li
-                  key={client.name}
-                  className="flex h-10 w-full items-center justify-center"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className={cn(
-                      "h-full w-full object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0",
-                      client.compact && "max-h-[86%] max-w-[86%]",
-                    )}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div>
+          <h3 className="mb-4 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
+            Formação
+          </h3>
+          <ul className="space-y-4">
+            {education.map((item) => (
+              <li key={item.title} className="border-b border-ink/10 pb-4">
+                <p className="font-medium text-ink">{item.title}</p>
+                <p className="mt-1 text-sm text-ink/55">
+                  {item.school} · {item.period}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
+      </div>
+
+      <div className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
+        <h3 className="mb-5 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
+          Marcas e clientes
+        </h3>
+        <ul className="flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1 [scrollbar-width:thin] md:gap-x-7">
+          {clients.map((client) => (
+            <li
+              key={client.name}
+              className="flex h-10 shrink-0 items-center justify-center"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={client.logo}
+                alt={client.name}
+                className={cn(
+                  "h-full w-auto object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0",
+                  client.compact && "max-h-[86%] max-w-[86%]",
+                )}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
