@@ -169,7 +169,6 @@ export const skills = [
 
 export const clients = [
   { name: "Natura", logo: "/images/clients/natura.svg" },
-  { name: "Avon", logo: "/images/clients/avon.svg" },
   { name: "Safra", logo: "/images/clients/safra.png" },
   { name: "Pismo", logo: "/images/clients/pismo.png" },
   { name: "Fastcash", logo: "/images/clients/fastcash.png" },

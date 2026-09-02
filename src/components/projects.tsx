@@ -12,8 +12,7 @@ export function Projects() {
           Casos em finanças, beleza, mídia e marcas de escala.
         </h2>
         <p className="mt-5 max-w-2xl text-lg text-ink/65">
-          Uma seleção de trabalhos públicos e experiências recentes. Detalhes
-          confidenciais ficam no LinkedIn ou numa conversa.
+          Uma seleção de trabalhos e experiências mais recentes.
         </p>
 
         <div className="mt-12 divide-y divide-ink/10 border-y border-ink/10">
