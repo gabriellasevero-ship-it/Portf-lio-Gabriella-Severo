@@ -92,20 +92,21 @@ export const projects = [
     href: "/cases/social-commerce",
   },
   {
-    title: "Novo App Safra PF",
-    client: "Banco Safra",
-    year: "2020 — 2021",
-    tags: ["Mobile", "Arquitetura de Informação", "UI"],
-    description:
-      "Nova interface e arquitetura de informação do aplicativo para pessoas físicas, com fluxos mais claros para o cotidiano bancário.",
-  },
-  {
     title: "Cockpit do Gerente",
     client: "Banco Safra",
     year: "2018 — 2020",
     tags: ["Plataforma", "Investimentos", "B2B"],
     description:
       "Plataforma única para gerentes atenderem clientes e realizarem investimentos — um desafio de complexidade, visão sistêmica e clareza operacional.",
+    href: "/cases/cockpit",
+  },
+  {
+    title: "Novo App Safra PF",
+    client: "Banco Safra",
+    year: "2020 — 2021",
+    tags: ["Mobile", "Arquitetura de Informação", "UI"],
+    description:
+      "Nova interface e arquitetura de informação do aplicativo para pessoas físicas, com fluxos mais claros para o cotidiano bancário.",
   },
   {
     title: "Minha Conta para tablets",
