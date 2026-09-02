@@ -3,6 +3,33 @@ import { projects } from "@/data/portfolio";
 
 const FEATURED_COUNT = 3;
 
+function ProjectTags({
+  tags,
+  alignEnd = false,
+}: {
+  tags: string[];
+  alignEnd?: boolean;
+}) {
+  return (
+    <ul
+      className={
+        alignEnd
+          ? "mt-4 flex flex-wrap gap-x-2 gap-y-1.5 pb-1 leading-5 md:justify-end"
+          : "mt-4 flex flex-wrap gap-x-2 gap-y-1.5 pb-1 leading-5"
+      }
+    >
+      {tags.map((tag) => (
+        <li
+          key={tag}
+          className="text-xs font-medium leading-5 tracking-wide text-signal uppercase last:mr-0"
+        >
+          {tag}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function Projects() {
   const featured = projects.slice(0, FEATURED_COUNT);
   const grid = projects.slice(FEATURED_COUNT);
@@ -44,16 +71,7 @@ export function Projects() {
                   <div className="md:text-right">
                     <p className="text-sm font-medium text-ink">{project.client}</p>
                     <p className="mt-1 text-sm text-ink/50">{project.year}</p>
-                    <ul className="mt-4 flex flex-wrap gap-2 md:justify-end">
-                      {project.tags.map((tag) => (
-                        <li
-                          key={tag}
-                          className="text-xs font-medium tracking-wide text-signal uppercase"
-                        >
-                          {tag}
-                        </li>
-                      ))}
-                    </ul>
+                    <ProjectTags tags={project.tags} alignEnd />
                   </div>
                 </div>
               </>
@@ -64,7 +82,7 @@ export function Projects() {
                 <Link
                   key={project.title}
                   href={project.href}
-                  className="group grid gap-5 py-8 transition-colors hover:bg-card/70 md:grid-cols-[88px_1fr] md:gap-8 md:py-10"
+                  className="group grid gap-5 px-5 pt-8 pb-10 transition-colors hover:bg-card/70 md:grid-cols-[88px_1fr] md:gap-8 md:px-8 md:pt-10 md:pb-12"
                 >
                   {content}
                 </Link>
@@ -74,7 +92,7 @@ export function Projects() {
             return (
               <article
                 key={project.title}
-                className="grid gap-5 py-8 md:grid-cols-[88px_1fr] md:gap-8 md:py-10"
+                className="grid gap-5 px-5 pt-8 pb-10 md:grid-cols-[88px_1fr] md:gap-8 md:px-8 md:pt-10 md:pb-12"
               >
                 {content}
               </article>
@@ -83,11 +101,11 @@ export function Projects() {
         </div>
 
         {grid.length > 0 ? (
-          <div className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-ink/10 bg-ink/10 md:mt-10 md:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-px border border-ink/10 bg-ink/10 md:mt-10 md:grid-cols-2">
             {grid.map((project, index) => (
               <article
                 key={project.title}
-                className="flex h-full flex-col bg-background p-6 md:p-8"
+                className="flex h-full min-h-min flex-col overflow-visible bg-background p-6 pb-8 md:p-8 md:pb-10"
               >
                 <p className="font-display text-2xl text-signal md:text-3xl">
                   {String(FEATURED_COUNT + index + 1).padStart(2, "0")}
@@ -98,19 +116,10 @@ export function Projects() {
                 <p className="mt-3 flex-1 text-base leading-relaxed text-ink/65">
                   {project.description}
                 </p>
-                <div className="mt-6">
+                <div className="mt-6 pb-1">
                   <p className="text-sm font-medium text-ink">{project.client}</p>
                   <p className="mt-1 text-sm text-ink/50">{project.year}</p>
-                  <ul className="mt-4 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <li
-                        key={tag}
-                        className="text-xs font-medium tracking-wide text-signal uppercase"
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
+                  <ProjectTags tags={project.tags} />
                 </div>
               </article>
             ))}
