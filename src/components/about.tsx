@@ -43,17 +43,17 @@ export function About() {
             <h3 className="mb-5 text-xs font-semibold tracking-[0.18em] uppercase text-signal">
               Marcas e clientes
             </h3>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
+            <ul className="grid grid-cols-2 gap-x-5 gap-y-4">
               {clients.map((client) => (
                 <li
                   key={client.name}
-                  className="flex h-12 w-full items-center justify-center"
+                  className="flex h-10 w-full items-center justify-center"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-8 max-h-8 w-auto max-w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                    className="h-full w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
                   />
                 </li>
               ))}
