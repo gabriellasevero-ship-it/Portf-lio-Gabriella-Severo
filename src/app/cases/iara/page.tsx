@@ -8,7 +8,7 @@ import { iaraCase } from "@/data/cases/iara";
 import { profile } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title: `${iaraCase.title} — Case | Gabriella Marques Severo`,
+  title: iaraCase.title,
   description: iaraCase.subtitle,
 };
 

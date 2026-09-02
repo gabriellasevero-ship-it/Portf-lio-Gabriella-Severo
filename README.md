@@ -1,8 +1,8 @@
-# Portfólio — Gabriella Marques Severo
+# Portfólio Gabriella Severo
 
 Site pessoal de **Gabriella Marques Severo**, Design Lead na Natura &Co.
 
-O conteúdo foi montado a partir do [perfil público no LinkedIn](https://www.linkedin.com/in/gabriella-marques-severo-1b93216/), com seções de sobre, experiência, projetos selecionados e contato.
+Inclui cases de **Iara** e **Social Commerce**, além da trajetória em produto e liderança de design.
 
 ## Stack
 
@@ -15,7 +15,7 @@ O conteúdo foi montado a partir do [perfil público no LinkedIn](https://www.li
 
 ```bash
 npm install
-npm run dev -- --port 43123
+npm run dev
 ```
 
 Abra [http://127.0.0.1:43123](http://127.0.0.1:43123).
@@ -27,11 +27,6 @@ npm run build
 npm start -- --port 43123
 ```
 
-## Personalização
+## Publicar
 
-Os textos ficam em `src/data/portfolio.ts`. Para evoluir o site, os próximos passos mais úteis são:
-
-- foto profissional no hero
-- e-mail ou formulário de contato
-- case studies com imagens e métricas
-- links para Behance / Figma (se houver)
+Use o botão **Publish** neste chat para publicar na Vercel. O site fica com o título **Portfólio Gabriella Severo**.

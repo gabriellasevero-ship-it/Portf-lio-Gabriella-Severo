@@ -8,7 +8,7 @@ import { socialCommerceCase } from "@/data/cases/social-commerce";
 import { profile } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title: `${socialCommerceCase.title} — Case | Gabriella Marques Severo`,
+  title: socialCommerceCase.title,
   description: socialCommerceCase.subtitle,
 };
 

@@ -15,11 +15,14 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriella Marques Severo — Design Lead",
+  title: {
+    default: "Portfólio Gabriella Severo",
+    template: "%s | Portfólio Gabriella Severo",
+  },
   description:
     "Portfólio de Gabriella Marques Severo, Design Lead na Natura &Co. Product Design, liderança de UX e experiências digitais para finanças, beleza e marcas de escala.",
   openGraph: {
-    title: "Gabriella Marques Severo — Design Lead",
+    title: "Portfólio Gabriella Severo",
     description:
       "Product Designer e Design Lead com mais de 15 anos criando experiências digitais centradas em pessoas e negócios.",
     locale: "pt_BR",
