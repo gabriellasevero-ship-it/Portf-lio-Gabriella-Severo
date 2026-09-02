@@ -170,6 +170,30 @@
   .animate-draw {
     animation: draw 1.2s ease-out both;
   }
+
+  .animate-draw-ring {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw-ring 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-draw-ring-delay-1 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw-ring 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  }
+
+  .animate-draw-ring-delay-2 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw-ring 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+  }
+
+  .animate-draw-ring-delay-3 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw-ring 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+  }
 }
 
 @keyframes rise {
@@ -202,6 +226,12 @@
   }
 }
 
+@keyframes draw-ring {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-rise,
   .animate-rise-delay-1,
@@ -209,7 +239,18 @@
   .animate-rise-delay-3,
   .animate-float,
   .animate-float-slow,
-  .animate-draw {
+  .animate-draw,
+  .animate-draw-ring,
+  .animate-draw-ring-delay-1,
+  .animate-draw-ring-delay-2,
+  .animate-draw-ring-delay-3 {
     animation: none !important;
+  }
+
+  .animate-draw-ring,
+  .animate-draw-ring-delay-1,
+  .animate-draw-ring-delay-2,
+  .animate-draw-ring-delay-3 {
+    stroke-dashoffset: 0;
   }
 }
