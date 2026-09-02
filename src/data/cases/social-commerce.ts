@@ -21,7 +21,6 @@ export const socialCommerceCase = {
       "Maior personalização e conveniência para os clientes identificados",
       "Levar o jeito único de fazer consultoria de beleza para redes e canais digitais",
     ],
-    image: "/images/cases/social-commerce/compromisso.png",
   },
   context: {
     title: "Contexto",
@@ -54,7 +53,6 @@ export const socialCommerceCase = {
       "Dificuldade na gestão de vendas e clientes",
       "Soluções pouco aderentes ao dia a dia real das consultoras",
     ],
-    image: "/images/cases/social-commerce/potencial-digital.png",
   },
   valueFit: {
     title: "Proposta de valor",
@@ -128,7 +126,6 @@ export const socialCommerceCase = {
       feedbacks: "283 feedbacks (Minha Loja 159 · Seller Center 124)",
       followUp: "30 dias de acompanhamento no WhatsApp e plataforma",
       events: "5 eventos de lançamento e escuta",
-      image: "/images/cases/social-commerce/numeros-pesquisa.png",
     },
   },
   roleDetail: {
@@ -174,7 +171,6 @@ export const socialCommerceCase = {
         { title: "Divulgação", text: "Material de apoio" },
         { title: "Cupons", text: "Geração de cupons" },
       ],
-      image: "/images/cases/social-commerce/painel-vendas.png",
     },
     videos: [
       {

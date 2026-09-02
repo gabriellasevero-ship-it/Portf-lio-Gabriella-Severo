@@ -81,15 +81,6 @@ export default function SocialCommerceCasePage() {
                 </li>
               ))}
             </ol>
-            <figure className="mt-10 overflow-hidden border border-ink/10 bg-card">
-              <Image
-                src={socialCommerceCase.commitment.image}
-                alt="Slide Nosso compromisso da Natura &Co"
-                width={1600}
-                height={900}
-                className="h-auto w-full"
-              />
-            </figure>
           </section>
 
           <section className="bg-card/60 py-16 md:py-20">
@@ -123,15 +114,6 @@ export default function SocialCommerceCasePage() {
                   </li>
                 ))}
               </ul>
-              <figure className="mt-10 overflow-hidden border border-ink/10 bg-card">
-                <Image
-                  src={socialCommerceCase.problem.image}
-                  alt="Slide com os pilares do potencial ainda não capturado na digitalização"
-                  width={1600}
-                  height={900}
-                  className="h-auto w-full"
-                />
-              </figure>
             </div>
           </section>
 
@@ -284,16 +266,6 @@ export default function SocialCommerceCasePage() {
                 </p>
               </div>
             </div>
-
-            <figure className="mt-8 overflow-hidden border border-ink/10 bg-card">
-              <Image
-                src={socialCommerceCase.research.numbers.image}
-                alt="Números da pesquisa e acompanhamento do Social Commerce"
-                width={1600}
-                height={900}
-                className="h-auto w-full"
-              />
-            </figure>
           </section>
 
           <section className="bg-card/60 py-16 md:py-20">
@@ -367,15 +339,6 @@ export default function SocialCommerceCasePage() {
                   </div>
                 ))}
               </div>
-              <figure className="mt-8 overflow-hidden border border-ink/10 bg-card">
-                <Image
-                  src={socialCommerceCase.solutions.panel.image}
-                  alt="Painel de vendas do Social Commerce com módulos de gestão"
-                  width={1600}
-                  height={900}
-                  className="h-auto w-full"
-                />
-              </figure>
             </div>
 
             <div className="mt-16">
