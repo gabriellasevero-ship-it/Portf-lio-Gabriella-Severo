@@ -42,13 +42,13 @@ export function Hero() {
         </div>
 
         <div className="animate-rise-delay-2 order-1 md:order-2">
-          <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-full ring-1 ring-ink/10 md:h-56 md:w-56 lg:h-64 lg:w-64">
+          <div className="relative mx-auto h-36 w-36 overflow-hidden rounded-full ring-1 ring-ink/8 md:h-44 md:w-44 lg:h-48 lg:w-48">
             <Image
               src={profile.photo}
               alt={`Foto de ${profile.name}`}
               fill
               priority
-              sizes="(max-width: 768px) 176px, (max-width: 1024px) 224px, 256px"
+              sizes="(max-width: 768px) 144px, (max-width: 1024px) 176px, 192px"
               className="object-cover object-[center_18%]"
             />
           </div>
