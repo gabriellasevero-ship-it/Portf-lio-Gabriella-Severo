@@ -51,7 +51,7 @@ export function TextType({
   hideCursorWhileTyping = false,
   cursorCharacter = "|",
   cursorClassName = "",
-  cursorBlinkDuration = 0.5,
+  cursorBlinkDuration = 1,
   textColors = [],
   variableSpeed,
   onSentenceComplete,
@@ -242,7 +242,9 @@ export function TextType({
         <span
           aria-hidden
           className={cn(
-            "text-type-cursor ml-0.5 inline-block translate-y-[-0.06em] text-[0.92em] font-medium",
+            // Avoid the `text-*` prefix — tailwind-merge treats it as a font/color
+            // utility and drops it when `text-signal` / `text-[…]` are also present.
+            "typing-cursor ml-0.5 inline-block translate-y-[-0.06em] text-[0.92em] font-medium",
             shouldHideCursor && "invisible",
             cursorClassName
           )}

@@ -113,7 +113,7 @@ export function Hero() {
               loop={false}
               showCursor
               cursorCharacter="_"
-              cursorBlinkDuration={0.5}
+              cursorBlinkDuration={1}
               cursorClassName="text-signal"
               initialDelay={200}
               startOnVisible

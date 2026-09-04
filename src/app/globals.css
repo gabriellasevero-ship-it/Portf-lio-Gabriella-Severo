@@ -317,7 +317,7 @@
 
 @keyframes cursor-blink {
   0%,
-  45% {
+  49% {
     opacity: 1;
   }
   50%,
@@ -326,12 +326,14 @@
   }
 }
 
-.text-type-cursor {
-  animation: cursor-blink var(--cursor-blink-duration, 0.5s) step-end infinite;
+/* Class must not use a `text-*` name — twMerge strips those against other text utilities. */
+.typing-cursor {
+  animation: cursor-blink var(--cursor-blink-duration, 1s) steps(1, end) infinite;
+  color: var(--signal);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .text-type-cursor {
+  .typing-cursor {
     animation: none;
     opacity: 1;
   }
