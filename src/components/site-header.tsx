@@ -6,10 +6,10 @@ import { profile } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#experiencia", label: "Experiência" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#experiencia", label: "Experiência" },
+  { href: "/#projetos", label: "Projetos" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export function SiteHeader() {
@@ -34,7 +34,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
         <a
-          href="#topo"
+          href="/#topo"
           className="font-display text-lg tracking-tight text-ink md:text-xl"
         >
           Gabriella<span className="text-signal">.</span>
