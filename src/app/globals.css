@@ -332,10 +332,78 @@
   color: var(--signal);
 }
 
+/* Mobile client-logo marquee — continuous seamless loop. Desktop keeps one flex row. */
+.client-logos {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 1.25rem,
+    #000 calc(100% - 1.25rem),
+    transparent
+  );
+}
+
+.client-logos-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: logo-marquee 42s linear infinite;
+  will-change: transform;
+}
+
+/* Trailing gap on each set so -50% lands on the seam (gap included). */
+.client-logos-set,
+.client-logos-dup {
+  padding-right: 1.5rem; /* matches gap-x-6 */
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .client-logos {
+    overflow: visible;
+    mask-image: none;
+  }
+
+  .client-logos-track {
+    display: block;
+    width: auto;
+    animation: none;
+    will-change: auto;
+  }
+
+  .client-logos-set {
+    padding-right: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .typing-cursor {
     animation: none;
     opacity: 1;
+  }
+
+  .client-logos {
+    overflow-x: auto;
+    mask-image: none;
+    scrollbar-width: thin;
+  }
+
+  .client-logos-track {
+    animation: none;
+    will-change: auto;
+  }
+
+  .client-logos-dup {
+    display: none;
   }
 }
 
