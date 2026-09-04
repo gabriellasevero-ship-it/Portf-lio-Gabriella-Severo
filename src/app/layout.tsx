@@ -34,6 +34,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
+      // Lets Next.js jump straight to the top on route changes while the
+      // in-page anchor nav keeps its smooth scroll.
+      data-scroll-behavior="smooth"
       className={`${outfit.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
