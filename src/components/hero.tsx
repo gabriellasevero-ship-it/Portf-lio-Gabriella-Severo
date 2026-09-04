@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { TextType } from "@/components/text-type";
 import { profile } from "@/data/portfolio";
 
 function PortraitGraphics() {
@@ -97,8 +98,24 @@ export function Hero() {
           <p className="hero-rise mb-4 text-xs font-semibold tracking-[0.22em] uppercase text-signal md:text-sm">
             {profile.role} · {profile.company}
           </p>
-          <h1 className="hero-rise hero-rise-delay-1 font-display text-[clamp(2.4rem,6.5vw,4.25rem)] leading-[0.96] text-ink text-balance">
-            {profile.name}
+          <h1
+            aria-label={profile.name}
+            className="hero-rise hero-rise-delay-1 font-display text-[clamp(2.4rem,6.5vw,4.25rem)] leading-[0.96] text-ink text-balance"
+          >
+            <TextType
+              as="span"
+              text={profile.name}
+              typingSpeed={75}
+              pauseDuration={1500}
+              deletingSpeed={50}
+              loop={false}
+              showCursor
+              cursorCharacter="_"
+              cursorBlinkDuration={0.5}
+              cursorClassName="text-signal"
+              initialDelay={200}
+              startOnVisible
+            />
           </h1>
           <p className="hero-rise hero-rise-delay-2 mx-auto mt-5 max-w-md text-base leading-relaxed text-ink/65 md:mx-0 md:mt-6 md:max-w-lg md:text-lg">
             {profile.headline}
