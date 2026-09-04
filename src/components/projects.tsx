@@ -298,9 +298,10 @@ function CaseCard({
             />
           ))}
 
+          {/* Solid accent instead of an outline so it reads over any cover. */}
           <span
             aria-hidden
-            className="absolute right-4 top-4 z-30 flex h-7 w-7 items-center justify-center border border-mist/40 text-xs text-mist transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-90"
+            className="absolute right-4 top-4 z-30 flex h-7 w-7 items-center justify-center bg-signal text-xs text-ink"
           >
             +
           </span>
