@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
@@ -33,22 +34,22 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
-        <a
+        <Link
           href="/#topo"
           className="font-display text-lg tracking-tight text-ink md:text-xl"
         >
           Gabriella<span className="text-signal">.</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-ink/65 transition-colors hover:text-ink"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Button asChild size="lg" className="rounded-md px-4">
             <a href={profile.whatsapp.href} target="_blank" rel="noreferrer">
@@ -92,14 +93,14 @@ export function SiteHeader() {
         <div className="border-t border-border/80 bg-mist/95 px-5 py-4 backdrop-blur-md md:hidden">
           <nav className="flex flex-col gap-3">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="py-2 text-base font-medium text-ink"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <Button asChild className="mt-2 rounded-md">
               <a href={profile.whatsapp.href} target="_blank" rel="noreferrer">
