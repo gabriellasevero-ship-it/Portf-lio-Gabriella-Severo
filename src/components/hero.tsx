@@ -11,51 +11,53 @@ function PortraitGraphics() {
     <svg
       aria-hidden
       viewBox="0 0 320 320"
-      className="pointer-events-none absolute left-1/2 top-1/2 h-[168%] w-[168%] -translate-x-1/2 -translate-y-1/2"
+      className="pointer-events-none absolute left-1/2 top-1/2 h-[175%] w-[175%] -translate-x-1/2 -translate-y-1/2"
       fill="none"
     >
-      <ellipse
-        cx="160"
-        cy="160"
-        rx="118"
-        ry="118"
-        className="hero-ring stroke-ink/[0.12]"
-        strokeWidth="1"
-      />
-      <ellipse
-        cx="148"
-        cy="168"
-        rx="102"
-        ry="78"
-        className="hero-ring hero-ring-delay-1 stroke-signal/55"
-        strokeWidth="1.1"
-        transform="rotate(-18 148 168)"
-      />
-      <ellipse
-        cx="172"
-        cy="152"
-        rx="88"
-        ry="108"
-        className="hero-ring hero-ring-delay-2 stroke-moss/45"
-        strokeWidth="1.1"
-        transform="rotate(22 172 152)"
-      />
-      <ellipse
-        cx="160"
-        cy="160"
-        rx="72"
-        ry="96"
-        className="hero-ring hero-ring-delay-3 stroke-honey/50"
-        strokeWidth="1"
-        transform="rotate(-8 160 160)"
-      />
-      <circle
-        cx="160"
-        cy="160"
-        r="64"
-        className="hero-ring stroke-ink/[0.08]"
-        strokeWidth="1"
-      />
+      <g className="hero-rings-orbit" style={{ transformOrigin: "160px 160px" }}>
+        <ellipse
+          cx="160"
+          cy="160"
+          rx="118"
+          ry="118"
+          className="hero-ring stroke-ink/[0.12]"
+          strokeWidth="1"
+        />
+        <ellipse
+          cx="148"
+          cy="168"
+          rx="102"
+          ry="78"
+          className="hero-ring hero-ring-delay-1 stroke-signal/55"
+          strokeWidth="1.1"
+          transform="rotate(-18 148 168)"
+        />
+        <ellipse
+          cx="172"
+          cy="152"
+          rx="88"
+          ry="108"
+          className="hero-ring hero-ring-delay-2 stroke-moss/45"
+          strokeWidth="1.1"
+          transform="rotate(22 172 152)"
+        />
+        <ellipse
+          cx="160"
+          cy="160"
+          rx="72"
+          ry="96"
+          className="hero-ring hero-ring-delay-3 stroke-honey/50"
+          strokeWidth="1"
+          transform="rotate(-8 160 160)"
+        />
+        <circle
+          cx="160"
+          cy="160"
+          r="64"
+          className="hero-ring stroke-ink/[0.08]"
+          strokeWidth="1"
+        />
+      </g>
     </svg>
   );
 }
@@ -138,15 +140,15 @@ export function Hero() {
         </div>
 
         <div className="hero-rise hero-rise-delay-2 order-1 md:order-2">
-          <div className="relative mx-auto flex h-52 w-52 items-center justify-center md:h-60 md:w-60 lg:h-64 lg:w-64">
+          <div className="relative mx-auto flex h-60 w-60 items-center justify-center md:h-72 md:w-72 lg:h-80 lg:w-80">
             <PortraitGraphics />
-            <div className="relative z-10 h-36 w-36 overflow-hidden rounded-full ring-1 ring-ink/8 md:h-44 md:w-44 lg:h-48 lg:w-48">
+            <div className="relative z-10 h-40 w-40 overflow-hidden rounded-full ring-1 ring-ink/8 md:h-52 md:w-52 lg:h-56 lg:w-56">
               <Image
                 src={profile.photo}
                 alt={`Foto de ${profile.name}`}
                 fill
                 priority
-                sizes="(max-width: 768px) 144px, (max-width: 1024px) 176px, 192px"
+                sizes="(max-width: 768px) 160px, (max-width: 1024px) 208px, 224px"
                 className="object-cover object-[center_18%]"
               />
             </div>
