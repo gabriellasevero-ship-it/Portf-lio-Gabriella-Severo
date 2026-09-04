@@ -61,47 +61,53 @@ export function About() {
           Marcas e clientes
         </h3>
         <div className="client-logos">
-          <ul className="client-logos-track flex flex-nowrap items-center gap-x-6 pb-1 md:gap-x-4 md:overflow-x-hidden lg:gap-x-5">
-            {clients.map((client) => (
-              <li
-                key={client.name}
-                style={
-                  {
-                    "--logo-grow": CLIENT_GROW[client.name] ?? 1,
-                  } as CSSProperties
-                }
-                className="flex h-10 shrink-0 items-center justify-center md:min-w-0 md:shrink md:basis-0 md:[flex-grow:var(--logo-grow)]"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className={cn(
-                    "h-full w-auto object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 md:h-auto md:max-h-10 md:w-full",
-                    client.compact && "max-h-[86%] max-w-[86%] md:max-w-full",
-                  )}
-                />
-              </li>
-            ))}
+          <div className="client-logos-track">
+            <ul className="client-logos-set flex flex-nowrap items-center gap-x-6 md:w-full md:gap-x-4 lg:gap-x-5">
+              {clients.map((client) => (
+                <li
+                  key={client.name}
+                  style={
+                    {
+                      "--logo-grow": CLIENT_GROW[client.name] ?? 1,
+                    } as CSSProperties
+                  }
+                  className="flex h-10 shrink-0 items-center justify-center md:min-w-0 md:shrink md:basis-0 md:[flex-grow:var(--logo-grow)]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className={cn(
+                      "h-full w-auto object-contain opacity-75 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 md:h-auto md:max-h-10 md:w-full",
+                      client.compact && "max-h-[86%] max-w-[86%] md:max-w-full",
+                    )}
+                  />
+                </li>
+              ))}
+            </ul>
             {/* Duplicate set for seamless mobile marquee; hidden from a11y and desktop. */}
-            {clients.map((client) => (
-              <li
-                key={`${client.name}-dup`}
-                aria-hidden="true"
-                className="client-logos-dup flex h-10 shrink-0 items-center justify-center md:hidden"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={client.logo}
-                  alt=""
-                  className={cn(
-                    "h-full w-auto object-contain opacity-75 grayscale",
-                    client.compact && "max-h-[86%] max-w-[86%]",
-                  )}
-                />
-              </li>
-            ))}
-          </ul>
+            <ul
+              aria-hidden="true"
+              className="client-logos-dup flex flex-nowrap items-center gap-x-6 md:hidden"
+            >
+              {clients.map((client) => (
+                <li
+                  key={`${client.name}-dup`}
+                  className="flex h-10 shrink-0 items-center justify-center"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={client.logo}
+                    alt=""
+                    className={cn(
+                      "h-full w-auto object-contain opacity-75 grayscale",
+                      client.compact && "max-h-[86%] max-w-[86%]",
+                    )}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
