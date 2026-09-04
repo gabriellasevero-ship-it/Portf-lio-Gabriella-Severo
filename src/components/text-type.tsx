@@ -29,6 +29,7 @@ interface TextTypeProps extends HTMLAttributes<HTMLElement> {
   textColors?: string[];
   variableSpeed?: { min: number; max: number };
   onSentenceComplete?: (sentence: string, index: number) => void;
+  /** Start when visible; leave and return to restart the typing. */
   startOnVisible?: boolean;
   reverseMode?: boolean;
 }
@@ -70,6 +71,7 @@ export function TextType({
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
   const [animate, setAnimate] = useState(false);
+  const [runId, setRunId] = useState(0);
   const containerRef = useRef<HTMLSpanElement | null>(null);
 
   const getRandomSpeed = useCallback(() => {
@@ -77,6 +79,14 @@ export function TextType({
     const { min, max } = variableSpeed;
     return Math.random() * (max - min) + min;
   }, [variableSpeed, typingSpeed]);
+
+  const resetTyping = useCallback(() => {
+    setDisplayedText("");
+    setCurrentCharIndex(0);
+    setIsDeleting(false);
+    setCurrentTextIndex(0);
+    setRunId((id) => id + 1);
+  }, []);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
@@ -88,33 +98,52 @@ export function TextType({
         return;
       }
 
-      setDisplayedText("");
-      setCurrentCharIndex(0);
-      setIsDeleting(false);
-      setCurrentTextIndex(0);
+      resetTyping();
       setAnimate(true);
+      if (!startOnVisible) setIsVisible(true);
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, [firstText]);
+  }, [firstText, resetTyping, startOnVisible]);
 
   useEffect(() => {
     if (!startOnVisible) return;
     const node = containerRef.current;
     if (!node) return;
 
+    // Watch the whole hero so leaving/returning to #topo restarts typing.
+    const root = node.closest("#topo") ?? node;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setIsVisible(true);
+          if (prefersReducedMotion()) {
+            setDisplayedText(firstText);
+            setIsVisible(true);
+            setAnimate(false);
+            return;
+          }
+
+          if (entry.isIntersecting) {
+            resetTyping();
+            setAnimate(true);
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+            setAnimate(false);
+            setDisplayedText("");
+            setCurrentCharIndex(0);
+            setIsDeleting(false);
+            setCurrentTextIndex(0);
+          }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.4 }
     );
 
-    observer.observe(node);
+    observer.observe(root);
     return () => observer.disconnect();
-  }, [startOnVisible]);
+  }, [startOnVisible, firstText, resetTyping]);
 
   useEffect(() => {
     if (!animate || !isVisible) return;
@@ -170,6 +199,7 @@ export function TextType({
     return () => clearTimeout(timeout);
   }, [
     animate,
+    runId,
     currentCharIndex,
     displayedText,
     isDeleting,
@@ -212,7 +242,7 @@ export function TextType({
         <span
           aria-hidden
           className={cn(
-            "text-type-cursor ml-0.5 inline-block",
+            "text-type-cursor ml-0.5 inline-block translate-y-[-0.06em] text-[0.92em] font-medium",
             shouldHideCursor && "invisible",
             cursorClassName
           )}
