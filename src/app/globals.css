@@ -345,9 +345,17 @@
 }
 
 .client-logos-track {
+  display: flex;
   width: max-content;
+  align-items: center;
   animation: logo-marquee 42s linear infinite;
   will-change: transform;
+}
+
+/* Trailing gap on each set so -50% lands on the seam (gap included). */
+.client-logos-set,
+.client-logos-dup {
+  padding-right: 1.5rem; /* matches gap-x-6 */
 }
 
 @keyframes logo-marquee {
@@ -355,7 +363,6 @@
     transform: translateX(0);
   }
   to {
-    /* Two identical sets → -50% lands exactly on the loop seam. */
     transform: translateX(-50%);
   }
 }
@@ -367,9 +374,14 @@
   }
 
   .client-logos-track {
+    display: block;
     width: auto;
     animation: none;
     will-change: auto;
+  }
+
+  .client-logos-set {
+    padding-right: 0;
   }
 }
 
