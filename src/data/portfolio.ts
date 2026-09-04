@@ -72,7 +72,25 @@ export const experience = [
   },
 ];
 
-export const projects = [
+/** Cover pulled from the case content itself; `position` is a CSS object-position. */
+export type ProjectCover = {
+  src: string;
+  alt: string;
+  position: string;
+};
+
+export type Project = {
+  title: string;
+  client: string;
+  year: string;
+  tags: string[];
+  description: string;
+  /** Only projects with a case page are clickable. */
+  href?: string;
+  cover?: ProjectCover;
+};
+
+export const projects: Project[] = [
   {
     title: "Iara — assistente de estoque e lucro no WhatsApp",
     client: "Natura &Co",
@@ -81,6 +99,11 @@ export const projects = [
     description:
       "De experimento Concierge a MVP: assistente com IA no WhatsApp para Consultoras enxergarem estoque, validade e lucro sem sair do chat.",
     href: "/cases/iara",
+    cover: {
+      src: "/images/cases/iara/whatsapp-fluxo.png",
+      alt: "Telas do assistente Iara no WhatsApp: cadastro por foto, reconhecimento de produtos e resumo de estoque e lucro",
+      position: "center",
+    },
   },
   {
     title: "Social Commerce — experiência digital para Consultoras",
@@ -90,6 +113,11 @@ export const projects = [
     description:
       "Serviços digitais mais claros e aderentes ao dia a dia das Consultoras de Beleza: vendas, clientes, pedidos e operação em escala.",
     href: "/cases/social-commerce",
+    cover: {
+      src: "/images/cases/social-commerce/posters/minha-loja.jpg",
+      alt: "Espaço digital da Consultora no celular, com vitrine de produtos Natura e Avon",
+      position: "center 20%",
+    },
   },
   {
     title: "Cockpit do Gerente",
@@ -99,6 +127,11 @@ export const projects = [
     description:
       "Plataforma única para gerentes atenderem clientes e realizarem investimentos — um desafio de complexidade, visão sistêmica e clareza operacional.",
     href: "/cases/cockpit",
+    cover: {
+      src: "/images/cases/cockpit/home-gerente.jpg",
+      alt: "Home do Cockpit do Gerente com assistente virtual, prospecção e agenda de reuniões",
+      position: "center top",
+    },
   },
   {
     title: "Novo Internet Banking Safra PF",
