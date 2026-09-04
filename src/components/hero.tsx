@@ -88,8 +88,8 @@ export function Hero() {
       className="relative min-h-[100svh] overflow-hidden"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="animate-float absolute -left-24 top-24 h-72 w-72 rounded-full bg-signal/20 blur-3xl" />
-        <div className="animate-float-slow absolute -right-16 bottom-16 h-64 w-64 rounded-full bg-moss/14 blur-3xl" />
+        <div className="animate-float absolute -left-24 top-24 h-80 w-80 rounded-full bg-signal/28 blur-3xl" />
+        <div className="animate-float-slow absolute -right-16 bottom-16 h-72 w-72 rounded-full bg-moss/20 blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-center gap-10 px-5 pb-16 pt-28 md:flex-row md:items-center md:justify-between md:gap-16 md:px-8 md:pb-20 md:pt-24">

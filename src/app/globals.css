@@ -146,7 +146,7 @@
   /* Hero entrance: held until #topo.motion-ready after first paint. */
   .hero-rise {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(28px);
   }
 
   .hero-ring {
@@ -155,51 +155,51 @@
   }
 
   #topo.motion-ready .hero-rise {
-    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: rise 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   #topo.motion-ready .hero-rise-delay-1 {
-    animation-delay: 0.1s;
+    animation-delay: 0.18s;
   }
 
   #topo.motion-ready .hero-rise-delay-2 {
-    animation-delay: 0.2s;
-  }
-
-  #topo.motion-ready .hero-rise-delay-3 {
-    animation-delay: 0.3s;
-  }
-
-  #topo.motion-ready .hero-ring {
-    animation: draw-ring 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  #topo.motion-ready .hero-ring-delay-1 {
-    animation-delay: 0.12s;
-  }
-
-  #topo.motion-ready .hero-ring-delay-2 {
-    animation-delay: 0.24s;
-  }
-
-  #topo.motion-ready .hero-ring-delay-3 {
     animation-delay: 0.36s;
   }
 
+  #topo.motion-ready .hero-rise-delay-3 {
+    animation-delay: 0.52s;
+  }
+
+  #topo.motion-ready .hero-ring {
+    animation: draw-ring 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  #topo.motion-ready .hero-ring-delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  #topo.motion-ready .hero-ring-delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  #topo.motion-ready .hero-ring-delay-3 {
+    animation-delay: 0.6s;
+  }
+
   .animate-rise {
-    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: rise 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .animate-rise-delay-1 {
-    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+    animation: rise 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
   }
 
   .animate-rise-delay-2 {
-    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+    animation: rise 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
   }
 
   .animate-rise-delay-3 {
-    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+    animation: rise 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.52s both;
   }
 
   .animate-float {
@@ -242,7 +242,7 @@
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(28px);
   }
   to {
     opacity: 1;
