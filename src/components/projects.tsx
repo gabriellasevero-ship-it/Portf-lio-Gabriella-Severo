@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect, useRef, type ReactNode } from "react";
 import Link from "next/link";
 import { projects } from "@/data/portfolio";
+import { cn } from "@/lib/utils";
 
 const FEATURED_COUNT = 3;
 
@@ -30,6 +34,56 @@ function ProjectTags({
   );
 }
 
+function Reveal({
+  className,
+  delayMs = 0,
+  children,
+}: {
+  className?: string;
+  delayMs?: number;
+  children: ReactNode;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reduceMotion) {
+      el.classList.add("is-visible");
+      return;
+    }
+
+    let timeoutId = 0;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        timeoutId = window.setTimeout(() => {
+          el.classList.add("is-visible");
+        }, delayMs);
+        observer.disconnect();
+      },
+      { threshold: 0.22, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(timeoutId);
+    };
+  }, [delayMs]);
+
+  return (
+    <div ref={ref} className={cn("reveal", className)}>
+      {children}
+    </div>
+  );
+}
+
 export function Projects() {
   const featured = projects.slice(0, FEATURED_COUNT);
   const grid = projects.slice(FEATURED_COUNT);
@@ -37,15 +91,21 @@ export function Projects() {
   return (
     <section id="projetos" className="scroll-mt-24 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <p className="mb-3 text-xs font-semibold tracking-[0.2em] uppercase text-signal md:text-sm">
-          Projetos selecionados
-        </p>
-        <h2 className="max-w-2xl font-display text-3xl leading-tight text-ink md:text-5xl text-balance">
-          Casos em finanças, beleza, mídia e marcas de escala.
-        </h2>
-        <p className="mt-5 max-w-2xl text-lg text-ink/65">
-          Uma seleção de trabalhos e experiências mais recentes.
-        </p>
+        <Reveal delayMs={0}>
+          <p className="mb-3 text-xs font-semibold tracking-[0.2em] uppercase text-signal md:text-sm">
+            Projetos selecionados
+          </p>
+        </Reveal>
+        <Reveal delayMs={90}>
+          <h2 className="max-w-2xl font-display text-3xl leading-tight text-ink md:text-5xl text-balance">
+            Casos em finanças, beleza, mídia e marcas de escala.
+          </h2>
+        </Reveal>
+        <Reveal delayMs={180}>
+          <p className="mt-5 max-w-2xl text-lg text-ink/65">
+            Uma seleção de trabalhos e experiências mais recentes.
+          </p>
+        </Reveal>
 
         <div className="mt-12 divide-y divide-ink/10 border-y border-ink/10">
           {featured.map((project, index) => {
@@ -79,23 +139,23 @@ export function Projects() {
 
             if ("href" in project && project.href) {
               return (
-                <Link
-                  key={project.title}
-                  href={project.href}
-                  className="group grid gap-5 px-5 pt-8 pb-10 transition-colors hover:bg-card/70 md:grid-cols-[88px_1fr] md:gap-8 md:px-8 md:pt-10 md:pb-12"
-                >
-                  {content}
-                </Link>
+                <Reveal key={project.title} delayMs={index * 110}>
+                  <Link
+                    href={project.href}
+                    className="group grid gap-5 px-5 pt-8 pb-10 transition-colors hover:bg-card/70 md:grid-cols-[88px_1fr] md:gap-8 md:px-8 md:pt-10 md:pb-12"
+                  >
+                    {content}
+                  </Link>
+                </Reveal>
               );
             }
 
             return (
-              <article
-                key={project.title}
-                className="grid gap-5 px-5 pt-8 pb-10 md:grid-cols-[88px_1fr] md:gap-8 md:px-8 md:pt-10 md:pb-12"
-              >
-                {content}
-              </article>
+              <Reveal key={project.title} delayMs={index * 110}>
+                <article className="grid gap-5 px-5 pt-8 pb-10 md:grid-cols-[88px_1fr] md:gap-8 md:px-8 md:pt-10 md:pb-12">
+                  {content}
+                </article>
+              </Reveal>
             );
           })}
         </div>
@@ -103,25 +163,28 @@ export function Projects() {
         {grid.length > 0 ? (
           <div className="mt-8 grid grid-cols-1 gap-px border border-ink/10 bg-ink/10 md:mt-10 md:grid-cols-2">
             {grid.map((project, index) => (
-              <article
+              <Reveal
                 key={project.title}
-                className="flex h-full min-h-min flex-col overflow-visible bg-background p-6 pb-8 md:p-8 md:pb-10"
+                delayMs={(index % 2) * 100}
+                className="h-full bg-background"
               >
-                <p className="font-display text-2xl text-signal md:text-3xl">
-                  {String(FEATURED_COUNT + index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-4 font-display text-xl leading-snug text-ink md:text-2xl">
-                  {project.title}
-                </h3>
-                <p className="mt-3 flex-1 text-base leading-relaxed text-ink/65">
-                  {project.description}
-                </p>
-                <div className="mt-6 pb-1">
-                  <p className="text-sm font-medium text-ink">{project.client}</p>
-                  <p className="mt-1 text-sm text-ink/50">{project.year}</p>
-                  <ProjectTags tags={project.tags} />
-                </div>
-              </article>
+                <article className="flex h-full min-h-min flex-col overflow-visible p-6 pb-8 md:p-8 md:pb-10">
+                  <p className="font-display text-2xl text-signal md:text-3xl">
+                    {String(FEATURED_COUNT + index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-4 font-display text-xl leading-snug text-ink md:text-2xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-base leading-relaxed text-ink/65">
+                    {project.description}
+                  </p>
+                  <div className="mt-6 pb-1">
+                    <p className="text-sm font-medium text-ink">{project.client}</p>
+                    <p className="mt-1 text-sm text-ink/50">{project.year}</p>
+                    <ProjectTags tags={project.tags} />
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
         ) : null}
